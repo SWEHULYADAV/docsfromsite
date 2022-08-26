@@ -33,5 +33,6 @@ while True:
             print(driver.page_source)
             search.click() #automating code to click and download Docs
             print("DOCUMENT NO: "+ str(pgcount) +" DOWNLOADED")
-        except:      #exceptional condition
+        except Exception as e:      #exceptional condition
+            print(e.args)
             err_count += 1
