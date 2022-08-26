@@ -25,6 +25,7 @@ while True:
             err_count = 0
             url = "https://indiankanoon.org/doc/"+str(pgcount)  #link of the site which we scrapped 
             driver.get(url)
+            sleep(50)
             print(driver.page_source)
             #variable with xpath
             search = driver.find_element(By.XPATH, "//input[@value='Get this document in PDF']")  
