@@ -34,5 +34,5 @@ while True:
             search.click() #automating code to click and download Docs
             print("DOCUMENT NO: "+ str(pgcount) +" DOWNLOADED")
         except Exception as e:      #exceptional condition
-            print(e.args)
+            print(e.args,e.message)
             err_count += 1
