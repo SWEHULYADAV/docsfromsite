@@ -21,7 +21,7 @@ err_count = 0
 #code
 
 while True:
-    if err_count < 100: 
+    if err_count < 5: 
         try:
             pgcount=pgcount+1
             err_count = 0
