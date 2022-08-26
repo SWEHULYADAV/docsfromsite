@@ -28,7 +28,6 @@ while True:
             err_count = 0
             url = "https://indiankanoon.org/doc/"+str(pgcount)  #link of the site which we scrapped 
             driver.get(url)
-            driver.add_cookie({'name': 'sessionid', 'content': 'b62aoza6wuxw23wne2an1addzgem4h8d'})
             #variable with xpath 
             search = WebDriverWait(driver, 50).until(
         EC.presence_of_element_located((By.XPATH, "//input[@value='Get this document in PDF']")))
