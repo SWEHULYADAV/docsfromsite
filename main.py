@@ -13,7 +13,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox") 
 driver = webdriver.Chrome(service=Service(executable_path=os.environ.get("CHROMEDRIVER_PATH")), options=chrome_options)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
 driver.page_source
 #creating variable
 pgcount = 0
@@ -28,6 +28,7 @@ while True:
             err_count = 0
             url = "https://indiankanoon.org/doc/"+str(pgcount)  #link of the site which we scrapped 
             driver.get(url)
+            driver.add_cookie({'name': 'sessionid', 'content': 'b62aoza6wuxw23wne2an1addzgem4h8d'})
             #variable with xpath 
             search = WebDriverWait(driver, 50).until(
         EC.presence_of_element_located((By.XPATH, "//input[@value='Get this document in PDF']")))
